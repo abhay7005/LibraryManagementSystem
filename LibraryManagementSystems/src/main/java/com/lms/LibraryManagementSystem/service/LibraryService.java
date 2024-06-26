@@ -1,8 +1,8 @@
-package com.lms.service;
+package com.lms.LibraryManagementSystem.service;
 
 import java.util.List;
 
-import com.lms.entity.Book;
+import com.lms.LibraryManagementSystem.entity.Book;
 
 import jakarta.transaction.Transactional;
 @Transactional

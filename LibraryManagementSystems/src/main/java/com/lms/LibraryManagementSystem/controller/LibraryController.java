@@ -1,4 +1,4 @@
-package com.lms.controller;
+package com.lms.LibraryManagementSystem.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lms.entity.Book;
-import com.lms.service.LibraryService;
+import com.lms.LibraryManagementSystem.entity.Book;
+import com.lms.LibraryManagementSystem.service.LibraryService;
 
 @RestController
 @RequestMapping("/library")

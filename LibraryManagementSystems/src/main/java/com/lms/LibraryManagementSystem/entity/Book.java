@@ -1,4 +1,4 @@
-package com.lms.entity;
+package com.lms.LibraryManagementSystem.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

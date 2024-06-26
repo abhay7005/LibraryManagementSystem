@@ -1,4 +1,4 @@
-package com.lms.serviceimpl;
+package com.lms.LibraryManagementSystem.serviceimpl;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
-import com.lms.dao.LibraryRepository;
-import com.lms.entity.Book;
-import com.lms.service.LibraryService;
+
+import com.lms.LibraryManagementSystem.dao.LibraryRepository;
+import com.lms.LibraryManagementSystem.entity.Book;
+import com.lms.LibraryManagementSystem.service.LibraryService;
 
 @Service
 public class LibraryServiceImpl implements LibraryService {
@@ -18,7 +19,12 @@ public class LibraryServiceImpl implements LibraryService {
 
 	@Override
 	public void addBook(Book book) {
+		List<Book> existingBooks = libraryRepository.findByIsbnAndDepartmentNot(book.getIsbn(), book.getDepartment());
+		if (!existingBooks.isEmpty()) {
+			throw new IllegalArgumentException("A book with the same ISBN already exists in another department.");
+		}
 		libraryRepository.save(book);
+
 	}
 
 	@Override

@@ -1,8 +1,10 @@
-package com.lms.controller;
+package com.lms.LibraryManagementSystem.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lms.entity.Book;
-import com.lms.service.LibraryService;
+import com.lms.LibraryManagementSystem.controller.LibraryController;
+import com.lms.LibraryManagementSystem.entity.Book;
+import com.lms.LibraryManagementSystem.service.LibraryService;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
